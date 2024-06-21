@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String, Date, 
+from sqlalchemy import create_engine, Column, Integer, String, Date, Boolean, JSON, Text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
@@ -17,14 +17,14 @@ class User(Base):
 class Family(Base):
     __tablename__ = "family"
     id = Column(Integer, prymary_key = True)
-    #foreingkey
+    #fk
     emergence_contact_id = Column(Integer)
     
 class FamilyChildren(Base):
     __tablename__ = "family-children"
-    #foreingkey
+    #fk
     child_id = Column(Integer)
-    #foreingkey
+    #fk
     family_id = Column(Integer)
     
 class Child(Base):
@@ -35,33 +35,21 @@ class Child(Base):
     gender = Column(String)
     spectrum_degree = Column(String)
     #family_id = Column(Integer)
-    #foreign
+    #fk
     trait_id = Column(String)
-
+class Traits(Base):
+    __tablename__ = "traits"
+    id = Column(Integer, prymary_key=True)
+    isvalid = Column(Boolean)
+    value = Column(String)
+    #fk
+    child_id = Column(Integer)
+    #fk
+    tag_id = Column(Integer)
 class Tag(Base):
     __tablename__ = "tags"
     id = Column(Integer, prymary_key=True)
     value = Column(String)
-    #foreign
-    tag_kind_id = Column(Integer, )
-    
-class TagKind(Base):
-    __tablename__ = "tag-kind"
-    id = Column(Integer, prymary_key = True)
-    kind = Column(String)
-
-class Traits(Base):
-    __tablename__ = "traits"
-    id = Column(Integer, prymary_key=True)
-    value = Column(String)
-
-class TraitsTags(Base):
-    __tablename__ = "traits-tags"
-    #foreign
-    trait_id = Column(Integer)
-    #foreign
-    tag_id = Column(Integer)
-
 class SchoolAdministrators(Base):
     __tablename__ = "school-administrators"
     id = Column(Integer, prymary_key = True)
@@ -79,7 +67,7 @@ class Schools(Base):
     contact_telephone = Column(String)
 
 #isso vem de usuario ou nao tem relacionamento
-class schoolProfessionals(Base):
+class SchoolProfessionals(Base):
     __tablename__ = "schools-professionals"
     id = Column(Integer, prymary_key = True )
     name = Column(String)
@@ -89,3 +77,43 @@ class schoolProfessionals(Base):
     address = Column(String)
     #fk
     school_id = Column(Integer)
+
+
+class SchoolProfessionalAssignments(Base):
+    __tablename__ = "School-Professional-assignments"
+    #fk
+    professional_id = Column(Integer)
+    employment_date = Column(Date)
+    #fk
+    school_id = Column(Integer)
+    
+#aberto a discussoes    
+class DevelopmentDiaries(Base):
+    __tablename__ = "Development-diaries"
+    id = Column(Integer, prymary_key= True)
+    #fk
+    child_id = Column(Integer)
+    entry_date = Column(Date)
+    entry_text = Column(Text)
+    tittle = Column(String)
+    detail_treat = Column(JSON)
+    #fk
+    assigned_professional_id = Column(Integer)
+    entry_category_tag = Column(String)
+    
+class SchoolStudents(Base):
+    __tablename__ = "School-students"
+    #fk
+    child_id = Column(Integer)
+    admission_date = Column(Date)
+    #fk
+    school_id = Column(Integer)
+    
+class DevelopmentDiaryChildDetails(Base):
+    __tablename__ = "Development-diary-child-details"
+    #fk
+    child_id = Column(Integer)
+    #fk
+    trait_id = Column(Integer)
+    #fk
+    development_diary_id = Column(Integer)
