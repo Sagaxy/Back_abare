@@ -1,0 +1,40 @@
+services:
+  postgres:
+    image: postgres:13
+    container_name: abare-db-c
+    volumes:
+      - postgres-abare-data:/var/lib/postgresql/data
+    networks:
+      - abare-network
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: abareuser
+      POSTGRES_PASSWORD: abarepass
+      POSTGRES_DB: abare
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 4G
+    restart: always
+
+  api:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: abare-api-c
+    volumes:
+      - ./src/logs/history:/app/logs/history
+    networks:
+      - abare-network
+    ports:
+      - "8080:8080"
+
+networks:
+  abare-network:
+    name: abare-network
+    driver: bridge
+
+volumes:
+  postgres-abare-data:

@@ -1,0 +1,31 @@
+{
+    "admin": [
+        {
+            "id": 0,
+            "access_type": 0,
+            "name": "Admin",
+            "email": "admin@abare.tech",
+            "password": "admin"
+        }
+    ],
+    "professionals": [
+        {
+            "id": 1,
+            "access_type": 1,
+            "name": "Lilian",
+            "profession": "Psychologist",
+            "email": "lilian@abare.tech",
+            "password": "123"
+        }
+    ],
+    "families": [
+        {
+            "id": 1,
+            "access_type": 2,
+            "name": "Sarah Ocy",
+            "family": "Medeiros",
+            "email": "sarah@abare.tech",
+            "password": "123"
+        }
+    ]
+}
