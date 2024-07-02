@@ -341,4 +341,9 @@ terraform.rc
 .history
 .ionide
 
+# CUSTOM
+Abare.session.sql
+docker-compose.yml
+Dockerfile
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,jetbrains,python,terraform

@@ -28,10 +28,10 @@ service-build:
 	docker compose build
 
 service-run-debug:
-	docker compose up -d --remove-orphans
+	docker compose up --remove-orphans
 
 service-run:
-	docker compose up --remove-orphans
+	docker compose up -d --remove-orphans
 
 service-init: setup-env service-build service-run
 
