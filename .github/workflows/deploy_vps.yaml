@@ -23,8 +23,10 @@ jobs:
                 # Commands to execute on the VPS
                 script: |
                     # try to git clone the repo
+                    cd services
                     git clone https://github.com/Sagaxy/Back_abare.git
                     cd Back_abare
+                    git checkout main
                     # try to stop the running containers with make command that can fail
                     if make service-stop; then
                         echo "Service stopped successfully"

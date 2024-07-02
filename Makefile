@@ -7,10 +7,10 @@ DB_NAME ?= abare
 
 PROJECT_NAME ?= abare
 MODE ?= dev
-PORT ?= 8080
+PORT ?= 8082
 VERSION ?= 0.1.0
 
-CORS_ALLOW_ORIGINS ?= "localhost:3000,localhost:8080"
+CORS_ALLOW_ORIGINS ?= "localhost:3000,localhost:8082,192.168.15.15:8000"
 CORS_ALLOW_CREDENTIALS ?= true
 CORS_ALLOW_METHODS ?= "*"
 CORS_ALLOW_HEADERS ?= "*"
