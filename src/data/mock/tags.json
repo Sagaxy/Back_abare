@@ -1,0 +1,24 @@
+{
+    "tags":[
+        {
+            "id":0,
+            "value":"medo"
+        },
+
+        {
+            "id":1,
+            "value":"aficção"
+        },
+        
+        {
+            "id":2,
+            "value":"repulsa"
+        },
+
+        {
+            "id":3,
+            "value":"incomodo"
+        }
+    ]
+    
+}
