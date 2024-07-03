@@ -12,6 +12,7 @@ router = APIRouter(
 )
 
 logger = Logger().get_logger()
+
 db_connector = DatabaseConnector()
 
 
