@@ -3,6 +3,7 @@ from icecream import ic
 from logs.logger import Logger
 from models.auth import LoginRequest, Authentication
 
+
 class Authenticator:
     mock_data_path = "data/mock/"
 
