@@ -1,12 +1,10 @@
 from sqlalchemy import Column, Integer, String
 from schemas.base import Base
 
-class User(Base):
-    __tablename__ = 'users'
+class Schools(Base):
+    __tablename__ = "schools"
     id = Column(Integer, primary_key=True)
     name = Column(String)
-    email = Column(String)
-    password = Column(String)
     address = Column(String)
-    phone = Column(String)
-    access = Column(Integer)
+    contact_email = Column(String)
+    contact_telephone = Column(String)
