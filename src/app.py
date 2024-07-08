@@ -37,8 +37,8 @@ app.include_router(db_router)
 from routes.user import router as user_router
 app.include_router(user_router)
 
-from src.routes.children import router as children_router
+from routes.children import router as children_router
 app.include_router(children_router)
 
-from src.routes.classgroups import router as class_groups_router
+from routes.classgroups import router as class_groups_router
 app.include_router(class_groups_router)
