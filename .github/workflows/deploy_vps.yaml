@@ -4,6 +4,7 @@ on:
     push:
         branches:
             - main
+            - coelho
 
 jobs:
     deploy:
@@ -26,7 +27,7 @@ jobs:
                     cd services
                     git clone https://github.com/Sagaxy/Back_abare.git
                     cd Back_abare
-                    git checkout main
+                    git checkout coelho
                     # try to stop the running containers with make command that can fail
                     if make service-stop; then
                         echo "Service stopped successfully"
