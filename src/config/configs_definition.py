@@ -13,8 +13,8 @@ class AppConfigsDefinition:
     docs_url: str = '/docs'
     redoc_url: str = '/redoc'
     swagger_ui_oauth2_redirect_url: str = '/docs/oauth2-redirect'
-    swagger_ui_init_oauth: str = None 
-    openapi_tags: List[dict] = None
+    swagger_ui_init_oauth: str|None = None 
+    openapi_tags: List[dict]|None = None
 
     def __init__(self, mode: str, title: str, version: str = None, description: str = None, openapi_tags: List[dict] = None):
         mod = '' if mode == 'prod' else f'-{mode}'.upper()

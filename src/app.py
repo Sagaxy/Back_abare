@@ -32,11 +32,13 @@ async def ping():
 
 
 from routes.db import router as db_router
-from routes.user import router as user_router
-#from src.routes.child import router as child_router
-#from src.routes.school import router as school_router
-
 app.include_router(db_router)
+
+from routes.user import router as user_router
 app.include_router(user_router)
+
+#from src.routes.child import router as child_router
 #app.include_router(child_router)
+
+#from src.routes.school import router as school_router
 #app.include_router(school_router)
