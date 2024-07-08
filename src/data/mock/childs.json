@@ -1,0 +1,39 @@
+{
+    "childs":[
+        {
+            "id":0,
+            "name":"José Lucas Lucena",
+            "birth_date":"2017-07-17",
+            "gender":"M",
+            "spectrum_degree":"nivel 1 de suporte",
+            "trait_id":0
+        },
+
+        {
+            "id":1,
+            "name":"Caio Vinicius Rocha",
+            "birth_date":"2018-05-29",
+            "gender":"M",
+            "spectrum_degree":"nivel 2 de suporte",
+            "trait_id":2
+        },
+        
+        {
+            "id":2,
+            "name":"Ana Clara Martins",
+            "birth_date":"2019-05-10",
+            "gender":"F",
+            "spectrum_degree":"nivel 1 de suporte",
+            "trait_id":3
+        },
+
+        {
+            "id":3,
+            "name":"Samuel Victor Luz Martins",
+            "birth_date":"2016-11-02",
+            "gender":"M",
+            "spectrum_degree":"nivel 3 de suporte",
+            "trait_id":1
+        }
+    ]
+}

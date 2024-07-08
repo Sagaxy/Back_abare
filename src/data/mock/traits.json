@@ -1,0 +1,40 @@
+{
+    "traits":[
+        {
+            "id": 0,
+            "isValid": true,
+            "value": "dinossaruros",
+            "child_id": 0,
+            "tag_id": 1
+        
+        },
+        
+        {
+            "id": 1,
+            "isValid": true,
+            "value": "abraços",
+            "child_id": 3,
+            "tag_id": 2
+        
+        },
+
+        {
+            "id":2,
+            "isValid": true,
+            "value": "som alto",
+            "child_id":1,
+            "tag_id":3
+
+        },
+
+        {
+            "id":3,
+            "isValid": true,
+            "value": "cobra",
+            "child_id":2,
+            "tag_id":0
+
+        }
+
+    ]
+}
