@@ -28,6 +28,7 @@ jobs:
                     git clone https://github.com/Sagaxy/Back_abare.git
                     cd Back_abare
                     git checkout coelho
+                    git pull
                     if make service-stop; then
                         echo "Service stopped successfully"
                     else

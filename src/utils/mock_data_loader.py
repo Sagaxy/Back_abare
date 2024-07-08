@@ -1,7 +1,7 @@
 from logs.logger import Logger
 
 
-def read_mock_data(file_name: str, mock_data_path: str = "data/mock", logger: Logger = None) -> dict:
+def read_mock_data(file_name: str, mock_data_path: str = "data/mock/", logger: Logger = None) -> dict:
     """
     Read the json mock data from the file into a dictionary
     """
