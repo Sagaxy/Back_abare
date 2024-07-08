@@ -1,7 +1,8 @@
 {
-    "childs":[
+    "children":[
         {
             "id":0,
+            "classgroup": 1,
             "name":"José Lucas Lucena",
             "birth_date":"2017-07-17",
             "gender":"M",
@@ -22,6 +23,7 @@
         
         {
             "id":2,
+            "classgroup": 2,
             "name":"Ana Clara Martins",
             "birth_date":"2019-05-10",
             "gender":"F",
@@ -32,6 +34,7 @@
 
         {
             "id":3,
+            "classgroup": 1,
             "name":"Samuel Victor Luz Martins",
             "birth_date":"2016-11-02",
             "gender":"M",

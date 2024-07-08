@@ -4,6 +4,19 @@ from typing import List, Dict
 import datetime
 import dateutil.parser as dparser
 
+from utils.age_calculator import calculate_age
+
+
+class ChildAbbreviated(BaseModel):
+    id: int
+    name: str
+    age: int
+
+    def __init__(self, data_dict: dict) -> None:
+        self.id = data_dict["id"]
+        self.name = data_dict["name"]
+        self.age = calculate_age(data_dict["birth_date"])
+
 class Child(BaseModel):
     child_id: int
     picture: str

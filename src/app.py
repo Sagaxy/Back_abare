@@ -24,7 +24,7 @@ app.add_middleware(
 
 @app.get('/')
 async def root():
-    return {'message': f'Welcome to the {APP_CONFIGS.title} API, check the documentation at {APP_CONFIGS.docs_url} or {APP_CONFIGS.redoc_url} endpoints.'}
+    return {'message': f'Welcome to the {APP_CONFIGS.title.capitalize()} API, check the documentation at {APP_CONFIGS.docs_url} or {APP_CONFIGS.redoc_url} endpoints.'}
 
 @app.post('/ping')
 async def ping():

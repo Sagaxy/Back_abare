@@ -1,0 +1,7 @@
+{
+    "access_types": [
+        {"id": "0", "description": "Administrador Escolar"},
+        {"id": "1", "description": "Profissional Escolar"},
+        {"id": "2", "description": "Familia"}
+    ]
+}

@@ -6,8 +6,8 @@ from services.databases.database_connector import DatabaseConnector
 
 
 router = APIRouter(
-    prefix="/professional",
-    tags=["Professional"],
+    prefix="/children",
+    tags=["Children"],
     responses={404: {"description": "Not found"}},
 )
 

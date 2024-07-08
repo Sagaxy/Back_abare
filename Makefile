@@ -35,6 +35,8 @@ service-run:
 
 service-init: setup-env service-build service-run
 
+service-init-debug: setup-env service-build service-run-debug
+
 service-stop:
 	docker compose down
 

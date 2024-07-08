@@ -28,7 +28,7 @@ APP_CONFIGS = AppConfigsDefinition(
     mode=os.environ.get("MODE"),
     title=os.environ.get("PROJECT_NAME"),
     version=os.environ.get("VERSION"),
-    description=f"{os.environ.get('PROJECT_NAME')}, it's goal is to provide a RESTful API with the necessary endpoints to implement a interface operations for the {os.environ.get('PROJECT_NAME')} project."
+    description=f"{os.environ.get('PROJECT_NAME').capitalize()}, it's goal is to provide a RESTful API with the necessary endpoints to implement a interface operations for the {os.environ.get('PROJECT_NAME').capitalize()} project."
 )
 
 
